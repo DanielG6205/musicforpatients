@@ -1,13 +1,12 @@
-import Header from "../components/Header"
 import Footer from "../components/Footer"
+import React from "react";
 
 export default function Layout({children} : Readonly<{children: React.ReactNode}>){
     return(
-        <main className = "font-work-sans">
-            <Header />
-            {children}
+        <html lang="en">
+            <body>{children}</body>
             <Footer />
-        </main>
+        </html>
     )
 
 }
