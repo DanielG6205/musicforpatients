@@ -28,7 +28,7 @@ export default function Team() {
         <TeamMember
           name="Jay Patel"
           imageSrc="/team/jay.jpg"
-          description="Jay Patel is also known as TheRanger991."
+          description="Jay Patel is a junior at River Hill High School. He is passionate about technology, which drives both his academic and extracurricular pursuits. As a former violinist, Jay is a strong believer in the power of music and its ability to bring comfort and build connections. As a CyberPatriot team captain, Jay has led his team through system hardening, digital forensics, and network security challenges, qualifying for the national semifinals in the platinum tier and ranking in the top 1% nationwide. Additionally, he actively participates in several other competitions and is currently working toward industry certifications, consistently enhancing his expertise and preparing for future challenges. Outside of the competitive scene, Jay enjoys volunteering and teaching younger students about STEM. From presenting at coding workshops to writing cybersecurity articles, he enjoys getting involved and leaving a positive impact on his community. After high school, Jay plans to pursue an education in computer engineering and cybersecurity. In his downtime, he enjoys reading a good sci-fi book, watching movies and TV shows, and spending quality time with family and friends. Driven by his curiosity and empathy, Jay is dedicated to using his talents to innovate and support communities in meaningful ways."
           linkedinUrl="https://www.linkedin.com/in/jay-patel-00652a320/"
         />
         
