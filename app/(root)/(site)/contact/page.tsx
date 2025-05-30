@@ -1,8 +1,11 @@
 "use client";
 
+import FadeUp from "@/app/components/FadeUp";
+
 
 export default function Contact() {
   return (
+    <FadeUp>
     <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen p-8 sm:p-20 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]">
       <h1 className="text-4xl font-bold mb-4">Contact Us!</h1>
 
@@ -60,5 +63,6 @@ export default function Contact() {
         <p className="text-lg">Call us at: <span className="font-bold">+1 (443) 535-5145</span> or <span className="font-bold">+1 (410) 300-7839</span> </p>
       </div>
     </div>
+    </FadeUp>
   );
 }

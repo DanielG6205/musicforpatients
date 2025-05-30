@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "firebase": "^11.8.1",
     "lodash": "^4.17.21",
     "next": "15.3.0",
     "react": "^19.0.0",
@@ -17,6 +19,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/aos": "^3.0.7",
     "@types/lodash": "^4.17.16",
     "@types/node": "^20",
     "@types/react": "^19",
