@@ -96,7 +96,9 @@ const Header = () => {
               </div>
               <div className={`absolute left-0 top-full bg-white text-black rounded shadow-md w-48 p-2 z-50 ${hoveredMenu === "donate" ? "block" : "hidden"}`}>
                 <Link href="/events" className="block px-4 py-2 hover:bg-gray-100">Events</Link>
-                <Link href="/donate" className="block px-4 py-2 hover:bg-gray-100">Donate</Link>
+                <a href="https://hcb.hackclub.com/donations/start/music-for-patients" target="_blank" rel="noopener noreferrer"className="block px-4 py-2 hover:bg-gray-100">
+                  Donate
+                </a>
                 <Link href="/volunteer" className="block px-4 py-2 hover:bg-gray-100">Volunteer</Link>
               </div>
             </div>

@@ -67,13 +67,15 @@ export default function NavBar() {
               </div>
               <div className={`absolute top-full bg-white text-black rounded shadow-md w-48 p-2 z-50 ${openMenu === "donate" ? "block" : "hidden"}`}>
                 <Link href="/events" className="block px-4 py-2 hover:bg-gray-100">Events</Link>
-                <Link href="/donate" className="block px-4 py-2 hover:bg-gray-100">Donate</Link>
+                <a href="https://hcb.hackclub.com/donations/start/music-for-patients" target="_blank" rel="noopener noreferrer"className="block px-4 py-2 hover:bg-gray-100">
+                  Donate
+                </a>
                 <Link href="/volunteer" className="block px-4 py-2 hover:bg-gray-100">Volunteer</Link>
               </div>
             </div>
 
             {/* Contact */}
-            <Link href="/contact" className="px-4 py-2 rounded hover:bg-gray-800 hover:text-gray-200">
+            <Link href="/contact" className="px-4 py-2 rounded hover:bg-gray-800 hover:text-gray-200" >
               Contact Us
             </Link>
           </div>
