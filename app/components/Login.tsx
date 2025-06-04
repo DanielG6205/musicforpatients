@@ -11,6 +11,7 @@ import {
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { auth, provider, db } from "../firebase/firebaseConfig";
 import Image from "next/image";
+import Portal from "./Portal";
 
 export default function Login() {
   const [user, setUser] = useState<User | null>(null);
@@ -139,39 +140,44 @@ export default function Login() {
     </div>
   );
 
-  const renderSetupModal = () => (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white p-6 rounded-lg w-full max-w-md max-h-[90vh] overflow-y-auto shadow-xl">
-        <h2 className="text-xl font-bold mb-4">Complete Your Profile</h2>
 
-        {[
-          { label: "Full Name", value: fullName, onChange: setFullName },
-          { label: "Birth Date", value: birthDate, onChange: setBirthDate, type: "date" },
-          { label: "State", value: state, onChange: setState },
-          { label: "School or College", value: school, onChange: setSchool },
-          { label: "Instrument", value: instrument, onChange: setInstrument },
-          { label: "Years Played", value: yearsPlayed, onChange: setYearsPlayed },
-        ].map(({ label, value, onChange, type = "text" }, i) => (
-          <div className="mb-4" key={i}>
-            <label className="block text-sm font-medium mb-1">{label}</label>
-            <input
-              type={type}
-              className="w-full border px-3 py-2 rounded"
-              value={value}
-              onChange={(e) => onChange(e.target.value)}
-            />
-          </div>
-        ))}
+const renderSetupModal = () => (
+  <Portal>
+  <div className="fixed inset-0 bg-[#cbc3e3] flex justify-center items-center z-[1000]">
+    <div className="bg-white p-6 rounded-lg w-full max-w-md max-h-[90vh] overflow-y-auto shadow-xl">
+      <h2 className="text-xl font-bold mb-4">Complete Your Profile</h2>
 
-        <button
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full"
-          onClick={handleProfileSubmit}
-        >
-          Save & Continue
-        </button>
-      </div>
+      {[
+        { label: "Full Name", value: fullName, onChange: setFullName },
+        { label: "Birth Date", value: birthDate, onChange: setBirthDate, type: "date" },
+        { label: "State", value: state, onChange: setState },
+        { label: "School or College", value: school, onChange: setSchool },
+        { label: "Instrument", value: instrument, onChange: setInstrument },
+        { label: "Years Played", value: yearsPlayed, onChange: setYearsPlayed },
+      ].map(({ label, value, onChange, type = "text" }, i) => (
+        <div className="mb-4" key={i}>
+          <label className="block text-sm font-medium mb-1">{label}</label>
+          <input
+            type={type}
+            className="w-full border px-3 py-2 rounded"
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+          />
+        </div>
+      ))}
+
+      <button
+        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full"
+        onClick={handleProfileSubmit}
+      >
+        Save & Continue
+      </button>
     </div>
-  );
+  </div>
+</Portal>
+
+);
+
 
   if (!hasMounted) return null;
 
