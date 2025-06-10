@@ -34,7 +34,7 @@ const Footer = () => {
           <Link href="/events" className="text-white hover:text-gray-200">
             Events
           </Link>
-          <Link href="/donate" className="text-white hover:text-gray-200">
+          <Link href="https://hcb.hackclub.com/donations/start/music-for-patients" className="text-white hover:text-gray-200">
             Donate
           </Link>
           <Link href="/contact" className="text-white hover:text-gray-200">
