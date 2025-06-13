@@ -6,13 +6,12 @@ export default function Volunteer() {
   const [calendarLoaded, setCalendarLoaded] = useState(false);
 
   useEffect(() => {
-    // Wait for a bit to see if the calendar loads by checking DOM changes
     const timeout = setTimeout(() => {
       const calendar = document.querySelector('.bugle-calendar');
       if (calendar && calendar.children.length > 0) {
         setCalendarLoaded(true);
       }
-    }, 1500); // enough for the script to inject the calendar
+    }, 1500);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -25,14 +24,11 @@ export default function Volunteer() {
       <h1 className="text-4xl font-bold mb-4">Volunteer</h1>
 
       <div className="w-full relative" style={{ minHeight: 300 }}>
-        {/* Fallback Text */}
         {!calendarLoaded && (
           <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-center z-0 pointer-events-none select-none">
             Calendar not showing? Please refresh the page.
           </div>
         )}
-
-        {/* Embed Container */}
         <div
           className="bugle-calendar mini-calendar-list relative z-10"
           data-id="365ead09-9d93-4f4a-af1a-c1a940c01eba"
