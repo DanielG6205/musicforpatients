@@ -1,62 +1,60 @@
-"use client";
+'use client';
 
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="bg-black text-white py-6">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+    <footer className="bg-black text-white py-8">
+      <div className="max-w-6xl mx-auto px-4">
+        {/* ---------- top row (stack → row) ---------- */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           
-          <div className="mb-4 md:mb-0 flex flex-row items-center gap-2">
+          {/* brand */}
+          <div className="flex items-center gap-2">
             <Image
               src="/small-logo.png"
-              alt="Music For Patients Logo"
-              width={50}
-              height={50} 
-              className="mr-2"  // Adds spacing to the right of the logo
+              alt="Music For Patients logo"
+              width={48}
+              height={48}
+              priority
             />
-            <h2 className="text-xl font-bold">Music For Patients</h2>
+            <h2 className="text-lg font-semibold sm:text-xl">
+              Music For Patients
+            </h2>
           </div>
 
-          <div className="flex gap-8 text-sm">
-          <Link href="/" className="text-white hover:text-gray-200">
-            Home
-          </Link> 
-          <Link href="/about" className="text-white hover:text-gray-200">
-            About Us
-          </Link>
-          <Link href="/team" className="text-white hover:text-gray-200">
-            Meet Our Team
-          </Link>
-          <Link href="/events" className="text-white hover:text-gray-200">
-            Events
-          </Link>
-          <Link href="/donate" className="text-white hover:text-gray-200">
-            Donate
-          </Link>
-          <Link href="/contact" className="text-white hover:text-gray-200">
-            Contact Us
-          </Link>
-          </div>
+          {/* nav links */}
+          <nav className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 text-sm">
+            <Link href="/"        className="hover:text-gray-300">Home</Link>
+            <Link href="/about"   className="hover:text-gray-300">About&nbsp;Us</Link>
+            <Link href="/team"    className="hover:text-gray-300">Meet&nbsp;Our&nbsp;Team</Link>
+            <Link href="/events"  className="hover:text-gray-300">Events</Link>
+            <Link href="/donate"  className="hover:text-gray-300">Donate</Link>
+            <Link href="/contact" className="hover:text-gray-300">Contact&nbsp;Us</Link>
+          </nav>
 
-          <div className="flex gap-4">
+          {/* social icons */}
+          <div className="flex justify-center md:justify-end gap-4">
             <a
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline"
+              aria-label="Instagram"
+              className="hover:opacity-80"
             >
-              <img src="/insta.png" alt="Instagram" className="w-6 h-6" /> 
+              <Image src="/insta.png" alt="" width={24} height={24} />
             </a>
           </div>
         </div>
 
-        <div className="mt-6 text-center text-sm text-gray-400">
-          &copy; {new Date().getFullYear()} MyWebsite. All rights reserved.
-        </div>
+        {/* ---------- copyright ---------- */}
+        <p className="mt-8 text-center text-xs text-gray-400">
+          &copy; {year} Music For Patients. All rights reserved.
+        </p>
       </div>
     </footer>
   );
