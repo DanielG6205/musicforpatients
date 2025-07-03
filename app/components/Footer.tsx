@@ -40,7 +40,7 @@ const Footer = () => {
           {/* social icons */}
           <div className="flex justify-center md:justify-end gap-4">
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/music4patients/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
