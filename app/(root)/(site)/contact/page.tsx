@@ -33,6 +33,7 @@ export default function Contact() {
       }
     } catch (error) {
       setResult("Something went wrong. Please try again.");
+      console.error("Error submitting form:", error);
     } finally {
       setIsSubmitting(false);
     }
