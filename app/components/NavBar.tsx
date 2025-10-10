@@ -26,11 +26,11 @@ export default function NavBar() {
     <>
       <nav
         className={`
-          fixed inset-x-0 top-0 z-50 h-16 bg-black px-6 py-3
+          bg-purple-900 fixed inset-x-0 top-0 z-50 h-16 bg-black px-6 py-3
           transition-shadow ${elevated ? 'shadow-lg' : 'shadow-sm'}
         `}
       >
-        <div className="relative flex h-full w-full items-center justify-between">
+        <div className="relative flex h-full w-full items-center justify-between bg-purple-900">
           {/* --------------- left: logo --------------- */}
           <Link href="/" className="flex-shrink-0">
             <Image src="/small-logo.png" alt="Music For Patients" width={40} height={40} priority />
@@ -65,13 +65,14 @@ export default function NavBar() {
             </DesktopDropdown>
 
             {/* ---------- Media dropdown ---------- */}
-            <DesktopDropdown label="Media" root="/media">
+            <DesktopDropdown label="Media" root="/performances">
+              <Link href="/performances"    className="block px-4 py-2 hover:bg-gray-100">Performance Videos</Link>
               <Link href="/gallery"    className="block px-4 py-2 hover:bg-gray-100">Gallery</Link>
               <Link href="/testimonies"className="block px-4 py-2 hover:bg-gray-100">Testimonies</Link>
             </DesktopDropdown>
 
             {/* ---------- Help Us dropdown ---------- */}
-            <DesktopDropdown label="Help Us" root="/help">
+            <DesktopDropdown label="Help Us" root="/volunteer">
               <Link href="/events"    className="block px-4 py-2 hover:bg-gray-100">Events</Link>
               <Link href="/volunteer" className="block px-4 py-2 hover:bg-gray-100">Volunteer</Link>
               <a
@@ -94,7 +95,7 @@ export default function NavBar() {
 
         {/* --------------- mobile accordion panel --------------- */}
         {mobileOpen && (
-          <div className="md:hidden mt-3 bg-black/90 rounded-lg py-3 px-5 space-y-2">
+          <div className="md:hidden mt-3 bg-purple-900 rounded-lg py-3 px-5 space-y-2">
             <Link href="/"        className="block text-white py-2" onClick={closeMobile}>Home</Link>
             <Link href="/contact" className="block text-white py-2" onClick={closeMobile}>Contact</Link>
 
@@ -113,7 +114,7 @@ export default function NavBar() {
               open={mobileSection === 'media'}
               toggle={() => setMobileSection(s => (s === 'media' ? null : 'media'))}
             >
-              <Link href="/media"        className="block text-white/90 py-1" onClick={closeMobile}>Overview</Link>
+              <Link href="/performances"        className="block text-white/90 py-1" onClick={closeMobile}>Performances</Link>
               <Link href="/gallery"      className="block text-white/90 py-1" onClick={closeMobile}>Gallery</Link>
               <Link href="/testimonies"  className="block text-white/90 py-1" onClick={closeMobile}>Testimonies</Link>
             </MobileAccordion>

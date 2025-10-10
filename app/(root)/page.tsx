@@ -29,7 +29,7 @@ export default function Page() {
     <>
       {/* Header */}
       <Header />
-      <div style={{ height: `150px` }} className="bg-black"/>
+      <div style={{ height: `120px` }} className="bg-purple-900"/>
 
       {/* Hero Section with GIF Background */}
       <section className="relative w-full h-screen bg-black text-white flex items-center justify-center overflow-hidden">
@@ -68,14 +68,14 @@ export default function Page() {
       {/* Image Gallery Section */}
       <section className="flex flex-col sm:flex-row gap-8 items-center justify-center py-10 bg-purple-900" data-aos="fade-up">
         <Image
-          src="/pic1.jpeg"
+          src="/front/DSC_0321.JPG"
           alt="Music in hospital"
           width={400}
           height={300}
           className="rounded-lg shadow-lg"
         />
         <Image
-          src="/pic2.jpeg"
+          src="/front/DSC_0258.JPG"
           alt="Cellist playing for patient"
           width={400}
           height={300}
@@ -91,38 +91,59 @@ export default function Page() {
       </section>
 
       {/* Cards Section */}
-      <section className="flex justify-center gap-10 py-20" data-aos="fade-up">
+      <section
+        className="flex flex-col sm:flex-row justify-center items-center gap-10 py-20 px-4 bg-black"
+        data-aos="fade-up"
+      >
         {/* Testimonies Card */}
         <div
-          className="w-1/2 max-w-xs bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          className="w-full sm:w-1/2 max-w-sm bg-gray-900 shadow-lg rounded-2xl overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 border border-gray-800"
           data-aos="fade-right"
         >
-          <Link href="/testimonies">
-            <h2 className="text-2xl font-semibold mb-4 text-center mt-2">Testimonies</h2>
-            <Image
-              src="/big-logo.png"
-              alt="Testimonies"
-              width={400}
-              height={300}
-              className="w-full h-40 object-cover rounded-md"
-            />
+          <Link href="/testimonies" className="block group">
+            <div className="overflow-hidden">
+              <Image
+                src="/front/DSC_0295.JPG"
+                alt="Testimonies"
+                width={400}
+                height={300}
+                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6 text-center">
+              <h2 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300">
+                Testimonies
+              </h2>
+              <p className="text-gray-400 mt-3 text-sm">
+                Hear inspiring stories and life-changing experiences from our community.
+              </p>
+            </div>
           </Link>
         </div>
-
+              
         {/* Events Card */}
         <div
-          className="w-1/2 max-w-xs bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          className="w-full sm:w-1/2 max-w-sm bg-gray-900 shadow-lg rounded-2xl overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 border border-gray-800"
           data-aos="fade-left"
         >
-          <Link href="/events">
-            <h2 className="text-2xl font-semibold mb-4 text-center mt-2">Events</h2>
-            <Image
-              src="/big-logo.png"
-              alt="Events"
-              width={400}
-              height={300}
-              className="w-full h-40 object-cover rounded-md"
-            />
+          <Link href="/events" className="block group">
+            <div className="overflow-hidden">
+              <Image
+                src="/front/DSC_0239.JPG"
+                alt="Events"
+                width={400}
+                height={300}
+                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6 text-center">
+              <h2 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300">
+                Events
+              </h2>
+              <p className="text-gray-400 mt-3 text-sm">
+                Explore our past and upcoming events — join us and make memories together.
+              </p>
+            </div>
           </Link>
         </div>
       </section>

@@ -10,16 +10,21 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "date-fns": "^4.1.0",
     "firebase": "^11.8.1",
+    "lightbox": "^0.5.0",
     "lodash": "^4.17.21",
     "next": "15.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-lazy-load-image-component": "^1.6.3",
+    "yet-another-react-lightbox": "^3.25.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/aos": "^3.0.7",
+    "@types/date-fns": "^2.5.3",
     "@types/lodash": "^4.17.16",
     "@types/node": "^20",
     "@types/react": "^19",

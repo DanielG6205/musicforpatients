@@ -1,0 +1,12 @@
+[
+  {
+    "origin": [
+      "https://musicforpatients.com",
+      "https://www.musicforpatients.com",   
+      "http://localhost:3000"      
+    ],
+    "method": ["GET"],
+    "responseHeader": ["Authorization", "Content-Type"],
+    "maxAgeSeconds": 3600
+  }
+]

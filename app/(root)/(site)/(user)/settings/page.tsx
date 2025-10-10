@@ -1,6 +1,5 @@
-/* --------------------------------------------
-   app/(dashboard)/settings/page.tsx  (example)
-   -------------------------------------------- */
+/* eslint-disable react-hooks/exhaustive-deps */
+
 'use client';
 
 import { useEffect, useState } from 'react';

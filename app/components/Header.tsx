@@ -37,7 +37,7 @@ const Header = () => {
 
   /* ====================================================== */
   return (
-    <header className="w-full bg-cream">
+    <header className="w-full bg-cream =">
       {/* shrinking hero logo */}
       <div
         className="flex justify-center items-center overflow-hidden transition-all duration-300 ease-out"
@@ -48,10 +48,10 @@ const Header = () => {
 
       {/* navbar */}
       <nav
-        className="fixed left-0 w-full z-50 px-5 py-3 shadow-sm font-work-sans bg-black/80 backdrop-blur-sm transition-all duration-300 ease-out"
+        className="bg-purple-900 fixed left-0 w-full z-50 px-5 py-3 shadow-sm font-work-sans bg-black/80 backdrop-blur-sm transition-all duration-300 ease-out"
         style={{ top: `${logoH}px` }}
       >
-        <div className="flex items-center justify-between relative">
+        <div className="flex items-center justify-between relative bg-purple-900">
           {/* site logo */}
           <Link href="/" className="flex-shrink-0">
             <Image src="/small-logo.png" alt="Logo" width={50} height={50} priority />
@@ -110,7 +110,7 @@ const Header = () => {
               onMouseLeave={() => setOpenDesktop(null)}
             >
               <Link
-                href="/media"
+                href="/performances"
                 className="px-4 py-2 rounded hover:bg-gray-800"
                 onClick={() => setOpenDesktop(null)}
               >
@@ -122,6 +122,7 @@ const Header = () => {
                   ${openDesktop === 'media' ? 'block' : 'hidden'}
                 `}
               >
+                <Link href="/performances"    className="block px-4 py-2 hover:bg-gray-100">Performance Videos</Link>
                 <Link href="/gallery"    className="block px-4 py-2 hover:bg-gray-100">Gallery</Link>
                 <Link href="/testimonies"className="block px-4 py-2 hover:bg-gray-100">Testimonies</Link>
               </div>
@@ -134,7 +135,7 @@ const Header = () => {
               onMouseLeave={() => setOpenDesktop(null)}
             >
               <Link
-                href="/help"
+                href="/volunteer"
                 className="px-4 py-2 rounded hover:bg-gray-800"
                 onClick={() => setOpenDesktop(null)}
               >
